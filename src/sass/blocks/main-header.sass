@@ -13,10 +13,20 @@
 		flex-direction: column
 		align-items: flex-start
 
-.main-header__logo-link
+.main-header__top-leftside
 	margin-right: 20px
 	margin-bottom: 20px
-	
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	@media screen and (max-width: $breakpoint-small)
+		margin-bottom: 0
+
+.main-header__logo-link
+	@media screen and (max-width: $breakpoint-small)
+		margin-right: 30px
+		margin-bottom: 20px
+
 .main-header__top-rightside
 	display: flex
 	align-items: center
@@ -32,6 +42,9 @@
 	margin-top: 15px
 	display: flex
 	align-items: center
+	@media screen and (max-width: $breakpoint-small)
+		margin-top: 0
+		margin-bottom: 20px
 	
 .main-header__btn-quote
 	margin-right: 7px
