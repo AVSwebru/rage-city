@@ -861,9 +861,20 @@ blockquote {
       flex-direction: column;
       align-items: flex-start; } }
 
-.main-header__logo-link {
+.main-header__top-leftside {
   margin-right: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 640px) {
+    .main-header__top-leftside {
+      margin-bottom: 0; } }
+
+@media screen and (max-width: 640px) {
+  .main-header__logo-link {
+    margin-right: 30px;
+    margin-bottom: 20px; } }
 
 .main-header__top-rightside {
   display: flex;
@@ -881,6 +892,10 @@ blockquote {
   margin-top: 15px;
   display: flex;
   align-items: center; }
+  @media screen and (max-width: 640px) {
+    .main-header__controls {
+      margin-top: 0;
+      margin-bottom: 20px; } }
 
 .main-header__btn-quote {
   margin-right: 7px; }
