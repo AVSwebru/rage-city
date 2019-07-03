@@ -1,23 +1,23 @@
-@mixin reset-link() 
+=reset-link 
   text-decoration: none
   &:hover 
     text-decoration: none
   
-
-
-@mixin reset-list() 
+=reset-list 
   margin: 0
   padding: 0
   list-style: none
 
-
-@mixin reset-btn() 
+=reset-btn
   padding: 0
   border: none
   background-color: transparent
 
-
-@mixin hidden-input() 
+=hidden-input 
   position: absolute
   clip: rect(0, 0, 0, 0)
 
+=link-color($color: #000, $hover-color: #000)
+  color: $color
+  &:hover
+    color: $hover-color

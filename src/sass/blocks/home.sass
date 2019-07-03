@@ -1,0 +1,50 @@
+.home
+	display: flex
+	@media screen and (max-width: $breakpoint-medium)
+		flex-direction: column
+
+.home__main
+	flex-grow: 1
+	margin-right: 35px
+	@media screen and (max-width: $breakpoint-medium)
+		width: 100%
+
+.home__aside
+	width: 275px
+	min-width: 275px
+	@media screen and (max-width: $breakpoint-medium)
+		display: flex
+		width: 100%
+		min-width: 100%
+		margin: 0 -10px 100px
+		& > * 
+			width: 50%
+			margin: 0 10px
+	@media screen and (max-width: $breakpoint-small)
+		flex-direction: column
+		margin: 0 0 90px
+		& > * 
+			width: 100%
+			margin: 0
+
+.home__quote-list
+	+reset-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -7px	
+
+.home__quote-item
+	margin: 0 7px 50px
+	&._default
+		width: 100%
+	&._small
+		width: calc(50% - 14px)
+		@media screen and (max-width: $breakpoint-small)
+			width: 100%
+
+.home__popular-quotes
+	margin-bottom: 15px
+	@media screen and (max-width: $breakpoint-medium)
+		margin-bottom: 0
+	@media screen and (max-width: $breakpoint-small)
+		margin-bottom: 15px

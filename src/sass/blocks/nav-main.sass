@@ -1,0 +1,17 @@
+.nav-main__list
+	+reset-list
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+.nav-main__link
+	+reset-link
+	display: inline-block
+	padding: 14px 8px
+	font-weight: 700
+	+link-color(#222, #222)
+	transition: background-color 0.35s
+	&:hover
+		background-color: darken(#e8ddcd, 10%)
+		transition: background-color 0.35s
+	

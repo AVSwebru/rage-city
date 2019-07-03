@@ -1,0 +1,41 @@
+.main-footer
+	padding: 35px 0 55px
+	background-color: #3d3d3d
+
+.main-footer__top
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: 20px
+	& > *
+		margin-bottom: 20px
+
+.main-footer__colabarate
+	+reset-link
+	min-width: 170px
+	padding: 12px
+	border: 1px solid #757575
+	background-color: transparent
+	text-align: center
+	+link-color(#757575, #fff)
+	transition: border-color 0.25s, color 0.25s
+	&:hover
+		border-color: #fff
+		transition: border-color 0.25s, color 0.25s
+
+.main-footer__nav-footer
+	margin-right: 20px	
+
+.main-footer__bottom
+	display: flex
+	align-items: flex-start
+	flex-direction: column
+	margin-bottom: -20px
+
+.main-footer__law-link
+	+reset-link
+	margin-bottom: 20px
+	font-size: 15px
+	+link-color(#a4a4a4, #fff)
+	

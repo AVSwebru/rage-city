@@ -1,0 +1,115 @@
+.quote
+	display: inline-block
+	&._policy
+		.quote__text
+			background-color: #d4e1f3
+			&::before
+				background-color: #d4e1f3
+	&._society
+		.quote__text
+			background-color: #e1f3d5
+			&::before
+				background-color: #e1f3d5
+	&._inspiration
+		.quote__text
+			background-color: #ebebeb
+			&::before
+				background-color: #ebebeb
+	&._humor
+		.quote__text
+			background-color: #e0d5f3
+			&::before
+				background-color: #e0d5f3
+	&._life
+		.quote__text
+			background-color: #f3f3d4
+			&::before
+				background-color: #f3f3d4
+	&._default
+		width: 100%
+		.quote__text
+			padding: 70px 45px 25px
+			@media screen and (max-width: $breakpoint-small)
+				padding: 70px 28px 25px
+		.quote__blockquote
+			font-size: 28px
+			@media screen and (max-width: $breakpoint-small)
+				font-size: 18px
+	&._small
+		.quote__text
+			padding: 50px 50px 25px
+			@media screen and (max-width: $breakpoint-small)
+				padding: 70px 28px 25px
+		.quote__blockquote
+			font-size: 20px
+			@media screen and (max-width: $breakpoint-small)
+				font-size: 18px
+
+.quote__img-container
+	display: block
+	height: 360px
+	margin-bottom: 20px
+	@media screen and (max-width: $breakpoint-small)
+		height: 200px
+
+.quote__img
+	width: 100%
+	height: 100%
+	object-fit: cover
+	margin-bottom: 20px
+
+.quote__main
+	position: relative
+	margin-bottom: 25px
+
+.quote__text
+	+reset-link
+	position: relative
+	margin-bottom: 35px
+	display: block
+	background: url('../img/quotes.svg') no-repeat 30px 15px / 40px 40px
+	&::before
+		content: ''
+		position: absolute
+		bottom: -20px
+		left: 55px
+		width: 25px
+		height: 20px
+		clip-path: polygon(0 0, 100% 0, 100% 100%)
+
+.quote__tag
+	position: absolute
+	top: 15px
+	right: 15px		
+	font-size: 15px
+	font-weight: 700
+	color: #828282
+
+.quote__blockquote
+	margin-bottom: 25px
+	font-weight: 700
+	line-height: 1.2
+	color: #222
+
+.quote__author
+	+reset-link
+	margin-left: 80px
+	display: inline-flex
+	align-items: center
+
+.quote__author-avatar
+	margin-right: 8px
+	width: 30px
+	height: 30px
+	border-radius: 50%
+
+.quote__author-name
+	margin-bottom: 8px
+	display: block
+	font-size: 14px
+	color: #000
+
+.quote__author-desc
+	display: block
+	font-size: 14px
+	color: #8c8c8c

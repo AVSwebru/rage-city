@@ -1,0 +1,1390 @@
+@charset "UTF-8";
+/* ========================================================================
+   Component: Base
+ ========================================================================== */
+/*
+ * 1. Set `font-size` to support `rem` units
+ *    Not using `font` property because a leading hyphen (e.g. -apple-system) causes the font to break in IE11 and Edge
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Style
+ */
+html {
+  /* 1 */
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+  background: #fff;
+  color: #666; }
+
+/*
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/* Links
+ ========================================================================== */
+/*
+ * Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  -webkit-text-decoration-skip: objects; }
+
+/*
+ * Remove the outline on focused links when they are also active or hovered
+ */
+a:active,
+a:hover {
+  outline: none; }
+
+/*
+ * Style
+ */
+a,
+.uk-link {
+  color: #1e87f0;
+  text-decoration: none;
+  cursor: pointer; }
+
+a:hover,
+.uk-link:hover {
+  color: #0f6ecd;
+  text-decoration: underline; }
+
+/* Text-level semantics
+ ========================================================================== */
+/*
+ * 1. Add an underline text decoration in Safari, Edge and IE.
+ * 2. Add `dotted` style in Safari.
+ * Note: The shorthand declaration `underline dotted` is not supported in Safari, Edge and IE.
+ */
+abbr[title] {
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration-style: dotted; }
+
+/*
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/*
+ * 1. Consolas has a better baseline in running text compared to `Courier`
+ * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Style
+ */
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp {
+  /* 1 */
+  font-family: Consolas, monaco, monospace;
+  /* 2 */
+  font-size: 0.875rem;
+  /* 3 */
+  color: #f0506e;
+  white-space: nowrap;
+  padding: 2px 6px;
+  background: #f8f8f8; }
+
+/*
+ * Emphasize
+ */
+em {
+  color: #f0506e; }
+
+/*
+ * Insert
+ */
+ins {
+  background: #ffd;
+  color: #666;
+  text-decoration: none; }
+
+/*
+ * Mark
+ */
+mark {
+  background: #ffd;
+  color: #666; }
+
+/*
+ * Quote
+ */
+q {
+  font-style: italic; }
+
+/*
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+ ========================================================================== */
+/*
+ * Remove the gap between embedded content and the bottom of their containers.
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * 1. Add responsiveness.
+ * 2. Auto-scale the height. Only needed if `height` attribute is present.
+ * 3. Corrects responsive `max-width` behavior if padding and border are used.
+ * 4. Exclude SVGs for IE11 because they don't preserve their aspect ratio.
+ */
+canvas,
+img,
+video {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  box-sizing: border-box; }
+
+/* 4 */
+@supports (display: block) {
+  svg {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box; } }
+
+/*
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/*
+ * Hide `alt` text for lazy load images
+ * Selector for background while loading img[data-src*='.jpg'][src*='data:image'] { background: grey; }
+ */
+img:not([src]) {
+  visibility: hidden; }
+
+/*
+ * Iframe
+ * Remove border in all browsers
+ */
+iframe {
+  border: 0; }
+
+/* Block elements
+ ========================================================================== */
+/*
+ * Margins
+ */
+p,
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure {
+  margin: 0 0 20px 0; }
+
+/* Add margin if adjacent element */
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + pre,
+* + address,
+* + fieldset,
+* + figure {
+  margin-top: 20px; }
+
+/* Headings
+ ========================================================================== */
+h1, .uk-h1,
+h2, .uk-h2,
+h3, .uk-h3,
+h4, .uk-h4,
+h5, .uk-h5,
+h6, .uk-h6 {
+  margin: 0 0 20px 0;
+  font-family: "Gilroy", sans-serif;
+  font-weight: normal;
+  color: #333;
+  text-transform: none; }
+
+/* Add margin if adjacent element */
+* + h1, * + .uk-h1,
+* + h2, * + .uk-h2,
+* + h3, * + .uk-h3,
+* + h4, * + .uk-h4,
+* + h5, * + .uk-h5,
+* + h6, * + .uk-h6 {
+  margin-top: 40px; }
+
+/*
+ * Sizes
+ */
+h1, .uk-h1 {
+  font-size: 2.23125rem;
+  line-height: 1.2; }
+
+h2, .uk-h2 {
+  font-size: 1.7rem;
+  line-height: 1.3; }
+
+h3, .uk-h3 {
+  font-size: 1.5rem;
+  line-height: 1.4; }
+
+h4, .uk-h4 {
+  font-size: 1.25rem;
+  line-height: 1.4; }
+
+h5, .uk-h5 {
+  font-size: 16px;
+  line-height: 1.4; }
+
+h6, .uk-h6 {
+  font-size: 0.875rem;
+  line-height: 1.4; }
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  h1, .uk-h1 {
+    font-size: 2.625rem; }
+  h2, .uk-h2 {
+    font-size: 2rem; } }
+
+/* Lists
+ ========================================================================== */
+ul,
+ol {
+  padding-left: 30px; }
+
+/*
+ * Reset margin for nested lists
+ */
+ul > li > ul,
+ul > li > ol,
+ol > li > ol,
+ol > li > ul {
+  margin: 0; }
+
+/* Description lists
+ ========================================================================== */
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0; }
+
+/* Horizontal rules
+ ========================================================================== */
+/*
+ * 1. Add the correct box sizing and height in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ * 3. Add the correct text-align in Edge and IE.
+ * 4. Style
+ */
+hr, .uk-hr {
+  /* 1 */
+  box-sizing: content-box;
+  height: 0;
+  /* 2 */
+  overflow: visible;
+  /* 3 */
+  text-align: inherit;
+  /* 4 */
+  margin: 0 0 20px 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5; }
+
+/* Add margin if adjacent element */
+* + hr,
+* + .uk-hr {
+  margin-top: 20px; }
+
+/* Address
+ ========================================================================== */
+address {
+  font-style: normal; }
+
+/* Blockquotes
+ ========================================================================== */
+blockquote {
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #333; }
+
+/* Add margin if adjacent element */
+* + blockquote {
+  margin-top: 20px; }
+
+/*
+ * Content
+ */
+blockquote p:last-of-type {
+  margin-bottom: 0; }
+
+blockquote footer {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #666; }
+  blockquote footer::before {
+    content: "\2014   "; }
+
+/* Preformatted text
+ ========================================================================== */
+/*
+ * 1. Contain overflow in all browsers.
+ */
+pre {
+  font: 0.875rem / 1.5 Consolas, monaco, monospace;
+  color: #666;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 1 */
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background: #fff; }
+
+pre code {
+  font-family: Consolas, monaco, monospace; }
+
+/* Selection pseudo-element
+ ========================================================================== */
+::-moz-selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none; }
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none; }
+
+/* HTML5 elements
+ ========================================================================== */
+/*
+ * 1. Add the correct display in Edge, IE 10+, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+details,
+main {
+  /* 2 */
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/*
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Pass media breakpoints to JS
+ ========================================================================== */
+/*
+ * Breakpoints
+ */
+.uk-breakpoint-s::before {
+  content: "640px"; }
+
+.uk-breakpoint-m::before {
+  content: "960px"; }
+
+.uk-breakpoint-l::before {
+  content: "1200px"; }
+
+.uk-breakpoint-xl::before {
+  content: "1600px"; }
+
+:root {
+  --uk-breakpoint-s: 640px;
+  --uk-breakpoint-m: 960px;
+  --uk-breakpoint-l: 1200px;
+  --uk-breakpoint-xl: 1600px; }
+
+/* ========================================================================
+   Component: Container
+ ========================================================================== */
+/*
+ * 1. Box sizing has to be `content-box` so the max-width is always the same and
+ *    unaffected by the padding on different breakpoints. It's important for the size modifiers.
+ */
+.uk-container {
+  /* 1 */
+  box-sizing: content-box;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-container {
+    padding-left: 30px;
+    padding-right: 30px; } }
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-container {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
+/*
+ * Micro clearfix
+ */
+.uk-container::before,
+.uk-container::after {
+  content: "";
+  display: table; }
+
+.uk-container::after {
+  clear: both; }
+
+/*
+ * Remove margin from the last-child
+ */
+.uk-container > :last-child {
+  margin-bottom: 0; }
+
+/*
+ * Remove padding from nested containers
+ */
+.uk-container .uk-container {
+  padding-left: 0;
+  padding-right: 0; }
+
+/* Size modifier
+ ========================================================================== */
+.uk-container-xsmall {
+  max-width: 750px; }
+
+.uk-container-small {
+  max-width: 900px; }
+
+.uk-container-large {
+  max-width: 1600px; }
+
+.uk-container-expand {
+  max-width: none; }
+
+/* Expand modifier
+ ========================================================================== */
+/*
+ * Expand one side only
+ */
+.uk-container-expand-left {
+  margin-left: 0; }
+
+.uk-container-expand-right {
+  margin-right: 0; }
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-container-expand-left.uk-container-xsmall,
+  .uk-container-expand-right.uk-container-xsmall {
+    max-width: calc(50% + (750px / 2) - 30px); }
+  .uk-container-expand-left.uk-container-small,
+  .uk-container-expand-right.uk-container-small {
+    max-width: calc(50% + (900px / 2) - 30px); } }
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-container-expand-left,
+  .uk-container-expand-right {
+    max-width: calc(50% + (1140px / 2) - 40px); }
+  .uk-container-expand-left.uk-container-xsmall,
+  .uk-container-expand-right.uk-container-xsmall {
+    max-width: calc(50% + (750px / 2) - 40px); }
+  .uk-container-expand-left.uk-container-small,
+  .uk-container-expand-right.uk-container-small {
+    max-width: calc(50% + (900px / 2) - 40px); }
+  .uk-container-expand-left.uk-container-large,
+  .uk-container-expand-right.uk-container-large {
+    max-width: calc(50% + (1600px / 2) - 40px); } }
+
+/* Item
+ ========================================================================== */
+/*
+ * Utility classes to reset container padding on the left or right side
+ * Note: It has to be negative margin on the item, because it's specific to the item.
+ */
+.uk-container-item-padding-remove-left,
+.uk-container-item-padding-remove-right {
+  width: calc(100% + 15px); }
+
+.uk-container-item-padding-remove-left {
+  margin-left: -15px; }
+
+.uk-container-item-padding-remove-right {
+  margin-right: -15px; }
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-container-item-padding-remove-left,
+  .uk-container-item-padding-remove-right {
+    width: calc(100% + 30px); }
+  .uk-container-item-padding-remove-left {
+    margin-left: -30px; }
+  .uk-container-item-padding-remove-right {
+    margin-right: -30px; } }
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-container-item-padding-remove-left,
+  .uk-container-item-padding-remove-right {
+    width: calc(100% + 40px); }
+  .uk-container-item-padding-remove-left {
+    margin-left: -40px; }
+  .uk-container-item-padding-remove-right {
+    margin-right: -40px; } }
+
+/* ========================================================================
+   Component: Modal
+ ========================================================================== */
+/*
+ * 1. Hide by default
+ * 2. Set position
+ * 3. Allow scrolling for the modal dialog
+ * 4. Horizontal padding
+ * 5. Mask the background page
+ * 6. Fade-in transition
+ */
+.uk-modal {
+  /* 1 */
+  display: none;
+  /* 2 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  /* 3 */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 4 */
+  padding: 15px 15px;
+  /* 5 */
+  background: rgba(0, 0, 0, 0.6);
+  /* 6 */
+  opacity: 0;
+  transition: opacity 0.15s linear; }
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-modal {
+    padding: 50px 30px; } }
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-modal {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
+/*
+ * Open
+ */
+.uk-modal.uk-open {
+  opacity: 1; }
+
+/* Page
+ ========================================================================== */
+/*
+ * Prevent scrollbars
+ */
+.uk-modal-page {
+  overflow: hidden; }
+
+/* Dialog
+ ========================================================================== */
+/*
+ * 1. Create position context for spinner and close button
+ * 2. Dimensions
+ * 3. Fix `max-width: 100%` not working in combination with flex and responsive images in IE11
+ *    `!important` needed to overwrite `uk-width-auto`. See `#modal-media-image` in tests
+ * 4. Style
+ * 5. Slide-in transition
+ */
+.uk-modal-dialog {
+  /* 1 */
+  position: relative;
+  /* 2 */
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 600px;
+  /* 3 */
+  max-width: calc(100% - 0.01px) !important;
+  /* 4 */
+  background: #fff;
+  /* 5 */
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  transition: 0.3s linear;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform; }
+
+/*
+ * Open
+ */
+.uk-open > .uk-modal-dialog {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0); }
+
+/* Size modifier
+ ========================================================================== */
+/*
+ * Container size
+ * Take the same size as the Container component
+ */
+.uk-modal-container .uk-modal-dialog {
+  width: 1200px; }
+
+/*
+ * Full size
+ * 1. Remove padding and background from modal
+ * 2. Reset all default declarations from modal dialog
+ */
+/* 1 */
+.uk-modal-full {
+  padding: 0;
+  background: none; }
+
+/* 2 */
+.uk-modal-full .uk-modal-dialog {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0); }
+
+/* Sections
+ ========================================================================== */
+.uk-modal-body {
+  padding: 30px 30px; }
+
+.uk-modal-header {
+  padding: 15px 30px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5; }
+
+.uk-modal-footer {
+  padding: 15px 30px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5; }
+
+/*
+ * Micro clearfix
+ */
+.uk-modal-body::before,
+.uk-modal-body::after,
+.uk-modal-header::before,
+.uk-modal-header::after,
+.uk-modal-footer::before,
+.uk-modal-footer::after {
+  content: "";
+  display: table; }
+
+.uk-modal-body::after,
+.uk-modal-header::after,
+.uk-modal-footer::after {
+  clear: both; }
+
+/*
+ * Remove margin from the last-child
+ */
+.uk-modal-body > :last-child,
+.uk-modal-header > :last-child,
+.uk-modal-footer > :last-child {
+  margin-bottom: 0; }
+
+/* Title
+ ========================================================================== */
+.uk-modal-title {
+  font-size: 2rem;
+  line-height: 1.3; }
+
+/* Close
+ * Adopts `uk-close`
+ ========================================================================== */
+[class*='uk-modal-close-'] {
+  position: absolute;
+  z-index: 1010;
+  top: 10px;
+  right: 10px;
+  padding: 5px; }
+
+/*
+ * Remove margin from adjacent element
+ */
+[class*='uk-modal-close-']:first-child + * {
+  margin-top: 0; }
+
+/*
+ * Hover
+ */
+/*
+ * Default
+ */
+/*
+ * Outside
+ * 1. Prevent scrollbar on small devices
+ */
+.uk-modal-close-outside {
+  top: 0;
+  /* 1 */
+  right: -5px;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  color: white; }
+
+.uk-modal-close-outside:hover {
+  color: #fff; }
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  /* 1 */
+  .uk-modal-close-outside {
+    right: 0;
+    -webkit-transform: translate(100%, -100%);
+            transform: translate(100%, -100%); } }
+
+/*
+ * Full
+ */
+.uk-modal-close-full {
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background: #fff; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff") format("woff"), local("Gilroy Regular"), local("Gilroy-Regular");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff") format("woff"), local("Gilroy Medium"), local("Gilroy-Medium");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff") format("woff"), local("Gilroy Bold"), local("Gilroy-Bold");
+  font-weight: 700;
+  font-style: normal; }
+
+html,
+body {
+  line-height: 1; }
+
+* {
+  box-sizing: border-box; }
+
+input,
+textarea,
+select,
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: inherit;
+  font-size: inherit; }
+
+button {
+  cursor: pointer; }
+
+blockquote {
+  margin: 0;
+  font-size: inherit;
+  font-style: normal; }
+
+.page-wrapper {
+  overflow-x: hidden; }
+
+.main-header {
+  margin: 25px 0 50px; }
+
+.main-header__top {
+  margin-bottom: 15px; }
+
+.main-header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 640px) {
+    .main-header__top-inner {
+      flex-direction: column;
+      align-items: flex-start; } }
+
+.main-header__logo-link {
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+.main-header__top-rightside {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 640px) {
+    .main-header__top-rightside {
+      flex-direction: column;
+      align-items: flex-start; } }
+
+.main-header__day-quote {
+  margin-right: 65px; }
+
+.main-header__controls {
+  margin-top: 15px;
+  display: flex;
+  align-items: center; }
+
+.main-header__btn-quote {
+  margin-right: 7px; }
+
+.main-header__bottom {
+  background-color: #e8ddcd; }
+
+.day-quote {
+  text-decoration: none;
+  display: block;
+  max-width: 400px; }
+  .day-quote:hover {
+    text-decoration: none; }
+
+.day-quote__title {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: #868686; }
+
+.day-quote__text {
+  line-height: 1.3;
+  color: #353535; }
+
+.btn-quote {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  padding: 12px;
+  text-align: center;
+  background-color: #e42227;
+  line-height: 1;
+  color: #fff; }
+  .btn-quote:hover {
+    text-decoration: none; }
+  .btn-quote:hover {
+    color: #fff; }
+  .btn-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -11px;
+    width: 12px;
+    height: 100%;
+    background-color: #e42227;
+    -webkit-clip-path: polygon(100% 0, 100% 101%, 0 101%, 93% 50%, 0 0);
+            clip-path: polygon(100% 0, 100% 101%, 0 101%, 93% 50%, 0 0); }
+
+.btn-login {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  min-width: 110px;
+  padding: 9px;
+  border: 1px solid #e42229;
+  text-align: center;
+  color: #262626; }
+
+.nav-main__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.nav-main__link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 8px;
+  font-weight: 700;
+  color: #222;
+  transition: background-color 0.35s; }
+  .nav-main__link:hover {
+    text-decoration: none; }
+  .nav-main__link:hover {
+    color: #222; }
+  .nav-main__link:hover {
+    background-color: #d8c5aa;
+    transition: background-color 0.35s; }
+
+.home {
+  display: flex; }
+  @media screen and (max-width: 960px) {
+    .home {
+      flex-direction: column; } }
+
+.home__main {
+  flex-grow: 1;
+  margin-right: 35px; }
+  @media screen and (max-width: 960px) {
+    .home__main {
+      width: 100%; } }
+
+.home__aside {
+  width: 275px;
+  min-width: 275px; }
+  @media screen and (max-width: 960px) {
+    .home__aside {
+      display: flex;
+      width: 100%;
+      min-width: 100%;
+      margin: 0 -10px 100px; }
+      .home__aside > * {
+        width: 50%;
+        margin: 0 10px; } }
+  @media screen and (max-width: 640px) {
+    .home__aside {
+      flex-direction: column;
+      margin: 0 0 90px; }
+      .home__aside > * {
+        width: 100%;
+        margin: 0; } }
+
+.home__quote-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7px; }
+
+.home__quote-item {
+  margin: 0 7px 50px; }
+  .home__quote-item._default {
+    width: 100%; }
+  .home__quote-item._small {
+    width: calc(50% - 14px); }
+    @media screen and (max-width: 640px) {
+      .home__quote-item._small {
+        width: 100%; } }
+
+.home__popular-quotes {
+  margin-bottom: 15px; }
+  @media screen and (max-width: 960px) {
+    .home__popular-quotes {
+      margin-bottom: 0; } }
+  @media screen and (max-width: 640px) {
+    .home__popular-quotes {
+      margin-bottom: 15px; } }
+
+.quote {
+  display: inline-block; }
+  .quote._policy .quote__text {
+    background-color: #d4e1f3; }
+    .quote._policy .quote__text::before {
+      background-color: #d4e1f3; }
+  .quote._society .quote__text {
+    background-color: #e1f3d5; }
+    .quote._society .quote__text::before {
+      background-color: #e1f3d5; }
+  .quote._inspiration .quote__text {
+    background-color: #ebebeb; }
+    .quote._inspiration .quote__text::before {
+      background-color: #ebebeb; }
+  .quote._humor .quote__text {
+    background-color: #e0d5f3; }
+    .quote._humor .quote__text::before {
+      background-color: #e0d5f3; }
+  .quote._life .quote__text {
+    background-color: #f3f3d4; }
+    .quote._life .quote__text::before {
+      background-color: #f3f3d4; }
+  .quote._default {
+    width: 100%; }
+    .quote._default .quote__text {
+      padding: 70px 45px 25px; }
+      @media screen and (max-width: 640px) {
+        .quote._default .quote__text {
+          padding: 70px 28px 25px; } }
+    .quote._default .quote__blockquote {
+      font-size: 28px; }
+      @media screen and (max-width: 640px) {
+        .quote._default .quote__blockquote {
+          font-size: 18px; } }
+  .quote._small .quote__text {
+    padding: 50px 50px 25px; }
+    @media screen and (max-width: 640px) {
+      .quote._small .quote__text {
+        padding: 70px 28px 25px; } }
+  .quote._small .quote__blockquote {
+    font-size: 20px; }
+    @media screen and (max-width: 640px) {
+      .quote._small .quote__blockquote {
+        font-size: 18px; } }
+
+.quote__img-container {
+  display: block;
+  height: 360px;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 640px) {
+    .quote__img-container {
+      height: 200px; } }
+
+.quote__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px; }
+
+.quote__main {
+  position: relative;
+  margin-bottom: 25px; }
+
+.quote__text {
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 35px;
+  display: block;
+  background: url("../img/quotes.svg") no-repeat 30px 15px/40px 40px; }
+  .quote__text:hover {
+    text-decoration: none; }
+  .quote__text::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 55px;
+    width: 25px;
+    height: 20px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%); }
+
+.quote__tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #828282; }
+
+.quote__blockquote {
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222; }
+
+.quote__author {
+  text-decoration: none;
+  margin-left: 80px;
+  display: inline-flex;
+  align-items: center; }
+  .quote__author:hover {
+    text-decoration: none; }
+
+.quote__author-avatar {
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; }
+
+.quote__author-name {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+  color: #000; }
+
+.quote__author-desc {
+  display: block;
+  font-size: 14px;
+  color: #8c8c8c; }
+
+.counter {
+  display: flex;
+  align-items: center; }
+  .counter._quote .counter__views-icon {
+    fill: #828282; }
+  .counter._quote .counter__comments-icon {
+    fill: #828282; }
+  .counter._aside .counter__views-icon {
+    fill: #c5c5c5; }
+  .counter._aside .counter__comments-icon {
+    fill: #c5c5c5; }
+
+.counter__views {
+  margin-right: 16px; }
+
+.counter__views-icon {
+  width: 19px;
+  height: 12px; }
+
+.counter__comments-icon {
+  width: 16px;
+  height: 14px; }
+
+.counter__number {
+  font-size: 14px;
+  color: #828282; }
+
+.popular-quotes {
+  padding: 25px 30px 20px 24px;
+  background-color: #ebebeb; }
+
+.popular-quotes__title {
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #8c8c8c; }
+
+.popular-quotes__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px; }
+
+.popular-quotes__view-all {
+  text-decoration: none;
+  font-size: 14px;
+  color: #707070; }
+  .popular-quotes__view-all:hover {
+    text-decoration: none; }
+  .popular-quotes__view-all:hover {
+    color: #707070; }
+
+.popular-quotes-item {
+  text-decoration: none;
+  display: block;
+  padding: 15px 0 12px;
+  border-bottom: 1px solid #000; }
+  .popular-quotes-item:hover {
+    text-decoration: none; }
+
+.popular-quotes-item__text {
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  color: #222; }
+
+.top-authors {
+  padding: 20px 30px 20px 24px;
+  background-color: #ebebeb; }
+
+.top-authors__title {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #8c8c8c; }
+
+.top-authors__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000; }
+
+.top-autors__list-item {
+  margin-bottom: 13px; }
+
+.top-authors__view-all {
+  text-decoration: none;
+  font-size: 14px;
+  color: #707070; }
+  .top-authors__view-all:hover {
+    text-decoration: none; }
+  .top-authors__view-all:hover {
+    color: #707070; }
+
+.popular-author {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center; }
+  .popular-author:hover {
+    text-decoration: none; }
+
+.popular-author__avatar {
+  margin-right: 10px;
+  border-radius: 50%; }
+
+.popular-author__title {
+  color: #222; }
+
+.main-footer {
+  padding: 35px 0 55px;
+  background-color: #3d3d3d; }
+
+.main-footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px; }
+  .main-footer__top > * {
+    margin-bottom: 20px; }
+
+.main-footer__colabarate {
+  text-decoration: none;
+  min-width: 170px;
+  padding: 12px;
+  border: 1px solid #757575;
+  background-color: transparent;
+  text-align: center;
+  color: #757575;
+  transition: border-color 0.25s, color 0.25s; }
+  .main-footer__colabarate:hover {
+    text-decoration: none; }
+  .main-footer__colabarate:hover {
+    color: #fff; }
+  .main-footer__colabarate:hover {
+    border-color: #fff;
+    transition: border-color 0.25s, color 0.25s; }
+
+.main-footer__nav-footer {
+  margin-right: 20px; }
+
+.main-footer__bottom {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: -20px; }
+
+.main-footer__law-link {
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #a4a4a4; }
+  .main-footer__law-link:hover {
+    text-decoration: none; }
+  .main-footer__law-link:hover {
+    color: #fff; }
+
+.nav-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 -9px -10px; }
+
+.nav-footer__item {
+  margin: 0 9px 10px; }
+
+.nav-footer__link {
+  text-decoration: none;
+  color: #757575; }
+  .nav-footer__link:hover {
+    text-decoration: none; }
+  .nav-footer__link:hover {
+    color: #fff; }
+
+.modal {
+  width: 450px;
+  padding: 50px 65px 80px 65px; }
+  @media (max-width: 960px) {
+    .modal {
+      width: 500px;
+      padding: 50px 30px;
+      background: #fff; } }
+
+.modal__title {
+  margin: 0 0 45px;
+  font-size: 26px;
+  font-weight: 600; }
+
+.modal__row {
+  margin-bottom: 35px; }
+
+.modal__registration {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700; }
+
+.modal__buttons {
+  margin-top: 45px; }
+  .modal__buttons > *:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 20px; }
+
+.modal__close-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px; }
+  .modal__close-btn:hover .modal__close-btn-icon {
+    fill: #1f1f1f; }
+
+.modal__close-btn-icon {
+  width: 18px;
+  height: 18px;
+  fill: #9f9f9f; }
+
+.field__label {
+  margin-bottom: 10px;
+  font-size: 15px; }
+
+.field__input {
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: none;
+  border-bottom: 5px solid transparent;
+  background-color: #f2f2f2;
+  font-size: 16px; }
+  .field__input:focus {
+    outline: none;
+    border-bottom-color: #328dd5; }
